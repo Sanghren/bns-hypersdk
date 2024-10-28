@@ -7,7 +7,7 @@ import (
 	"github.com/ava-labs/avalanchego/utils/ulimit"
 	"github.com/ava-labs/avalanchego/vms/rpcchainvm"
 	"github.com/spf13/cobra"
-	"namevm-hypersdk/cmd/vm/version"
+	"namevm-hypersdk/cmd/namevm/version"
 	"namevm-hypersdk/vm"
 	"os"
 )
