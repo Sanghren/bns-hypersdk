@@ -8,5 +8,5 @@ NAMEVM_PATH=$(
   cd "$(dirname "${BASH_SOURCE[0]}")"
   cd .. && pwd
 )
-
-ginkgo -v "NAMEVM_PATH"/tests/e2e/e2e.test -- --stop-network
+echo "Path " $NAMEVM_PATH/tests/e2e/e2e.test
+ginkgo -v "$NAMEVM_PATH"/tests/e2e/e2e.test -- --stop-network
