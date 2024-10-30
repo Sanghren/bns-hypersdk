@@ -67,15 +67,15 @@ rm -f "${HYPERSDK_DIR}"/avalanchego-"${VERSION}"/plugins/qCNyZHrs3rZX458wPJXPJJy
 # rebuild with latest code
 go build \
 -o "${HYPERSDK_DIR}"/avalanchego-"${VERSION}"/plugins/qCNyZHrs3rZX458wPJXPJJypPf6w423A84jnfbdP2TPEmEE9u \
-./cmd/namevm
+../cmd/namevm
 
 ############################
 echo "building e2e.test"
 
 prepare_ginkgo
 
-ACK_GINKGO_RC=true ginkgo build ./tests/e2e
-./tests/e2e/e2e.test --help
+ACK_GINKGO_RC=true ginkgo build ../tests/e2e
+../tests/e2e/e2e.test --help
 
 additional_args=("$@")
 
@@ -86,7 +86,7 @@ if [[ ${MODE} == "run" ]]; then
 fi
 
 echo "running e2e tests"
-./tests/e2e/e2e.test \
+../tests/e2e/e2e.test \
 --ginkgo.v \
 --avalanchego-path="${AVALANCHEGO_PATH}" \
 --plugin-dir="${AVALANCHEGO_PLUGIN_DIR}" \
